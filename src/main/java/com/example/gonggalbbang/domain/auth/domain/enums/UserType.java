@@ -7,7 +7,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public enum UserType {
 
-    ROLE_STUDENT("USER");
+    ROLE_USER("USER");
 
     private final String role;
 }
