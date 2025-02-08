@@ -20,7 +20,7 @@ import com.example.gonggalbbang.global.common.Response;
 import com.example.gonggalbbang.global.common.ResponseData;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/api/auth")
 @RequiredArgsConstructor
 @Tag(name = "auth", description = "auth API")
 public class AuthController {
