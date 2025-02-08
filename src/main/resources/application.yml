@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:mysql://marubilyeo-database.cx6wqaumgmz3.us-east-1.rds.amazonaws.com:3306/appjam
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: maru
+    password: maru1234
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
