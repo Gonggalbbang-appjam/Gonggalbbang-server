@@ -10,7 +10,7 @@ public record JoinReq(String username, String name, String password, int number)
                 .username(joinReq.username)
                 .name(joinReq.name)
                 .password(password)
-                .role(UserType.ROLE_USER) // 학생 권한 추가
+                .role(UserType.ROLE_USER)
                 .build();
     }
 }
