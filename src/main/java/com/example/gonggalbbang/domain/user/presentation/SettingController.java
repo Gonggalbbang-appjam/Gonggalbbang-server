@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -36,5 +37,11 @@ public class SettingController {
     @Operation(summary = "설정 저장", description = "사용자의 설정을 저장합니다. upType은 HUNDRED, THOUSAND 둘 중에 하나/ HUNDRED:100, THOUSAND:1000")
     public Response createSetting(@Validated @RequestBody SettingReq settingReq) {
         return settingService.createSetting(settingReq);
+    }
+
+    @PutMapping
+    @Operation(summary = "설정 수정", description = "사용자의 설정을 수정합니다.")
+    public Response updateSetting(@Validated @RequestBody SettingReq settingReq) {
+        return settingService.updateSetting(settingReq);
     }
 }
