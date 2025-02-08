@@ -33,7 +33,7 @@ public class SettingController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    @Operation(summary = "설정 저장", description = "사용자의 설정을 저장합니다. upType은 HUNDRED, THOUSAND 둘 중에 하나")
+    @Operation(summary = "설정 저장", description = "사용자의 설정을 저장합니다. upType은 HUNDRED, THOUSAND 둘 중에 하나/ HUNDRED:100, THOUSAND:1000")
     public Response createSetting(@Validated @RequestBody SettingReq settingReq) {
         return settingService.createSetting(settingReq);
     }
