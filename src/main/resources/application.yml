@@ -7,5 +7,26 @@ spring:
 
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: create
     show-sql: true
+
+jwt:
+  secretKey: be94068f4e429b16248e66838bcaa6b70ec814e86ff2d7635384cebdaaadf500
+  refreshExp: 604800000 # 1주
+  accessExp: 6000000 # 2시간
+
+springdoc:
+  api-docs:
+    enabled: true
+    version: openapi_3_0
+    path: /v3/api-docs
+
+  default-consumes-media-type: application/json
+  auto-tag-classes: true
+  groups:
+    enabled: false
+
+  swagger-ui:
+    tags-sorter: alpha
+    operationsSorter: alpha
+    path: /swagger-ui.html
