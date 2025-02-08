@@ -30,9 +30,6 @@ public class User {
     private String password; // 비번
 
     @Column(nullable = false)
-    private int number; // 학번
-
-    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private UserType role;
 }
